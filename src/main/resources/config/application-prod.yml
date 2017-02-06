@@ -21,8 +21,8 @@ spring:
         type: com.zaxxer.hikari.HikariDataSource
         url: jdbc:mysql://myrds.ckqtqh1copoy.us-west-1.rds.amazonaws.com/myDB?useUnicode=true&characterEncoding=utf8&useSSL=false
         name:
-        username:
-        password:
+        username: adminuser
+        password: adminuser
         hikari:
             data-source-properties:
                 cachePrepStmts: true

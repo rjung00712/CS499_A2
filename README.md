@@ -1,5 +1,17 @@
 # myapp
 
+This is a simple example of commerce transaction database.
+I have 3 entities: the Buyer, the Seller, and Item.
+
+The Buyer has three fields: a buyer_id, a name, and address
+The Seller has three fields: an seller_id, name, and account number
+The Item has three fields: an item_id, description, and price
+
+The relationships among these entities are simple:
+The Seller SELLS Items in an Many-to-Many cardinality
+The Buyer BUYS FROM Seller in a Many-to-Many cardinality
+The Buyer BUYS an Item in a One-to-One cardinality
+
 This application was generated using JHipster 3.12.2, you can find documentation and help at [https://jhipster.github.io/documentation-archive/v3.12.2](https://jhipster.github.io/documentation-archive/v3.12.2).
 
 ## Development
