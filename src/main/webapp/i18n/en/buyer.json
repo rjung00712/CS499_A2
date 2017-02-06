@@ -1,0 +1,25 @@
+{
+    "myappApp": {
+        "buyer" : {
+            "home": {
+                "title": "Buyers",
+                "createLabel": "Create a new Buyer",
+                "createOrEditLabel": "Create or edit a Buyer",
+                "search": "Search for Buyer"
+            },
+            "created": "A new Buyer is created with identifier {{ param }}",
+            "updated": "A Buyer is updated with identifier {{ param }}",
+            "deleted": "A Buyer is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Buyer {{ id }}?"
+            },
+            "detail": {
+                "title": "Buyer"
+            },
+            "name": "Name",
+            "address": "Address",
+            "buys": "Buys",
+            "transacts": "Transacts"
+        }
+    }
+}

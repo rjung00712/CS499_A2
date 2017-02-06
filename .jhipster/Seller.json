@@ -1,0 +1,28 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityRelationshipName": "",
+            "relationshipName": "sells",
+            "otherEntityName": "item",
+            "otherEntityField": "id",
+            "ownerSide": true
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "account",
+            "fieldType": "Integer"
+        }
+    ],
+    "changelogDate": "20170205073035",
+    "entityTableName": "seller",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no"
+}

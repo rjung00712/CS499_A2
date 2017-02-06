@@ -1,0 +1,19 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "description",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "price",
+            "fieldType": "Float"
+        }
+    ],
+    "changelogDate": "20170205073036",
+    "entityTableName": "item",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no"
+}

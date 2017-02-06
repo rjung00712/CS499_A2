@@ -1,0 +1,68 @@
+<div>
+    <h2 data-translate="myappApp.buyer.home.title">Buyers</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="buyer.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span  data-translate="myappApp.buyer.home.createLabel">
+                        Create new Buyer
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span data-translate="global.field.id">ID</span></th>
+                    <th><span data-translate="myappApp.buyer.name">Name</span></th>
+                    <th><span data-translate="myappApp.buyer.address">Address</span></th>
+                    <th><span data-translate="myappApp.buyer.buys">Buys</span></th>
+                    <th><span data-translate="myappApp.buyer.transacts">Transacts</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="buyer in vm.buyers track by buyer.id">
+                    <td><a ui-sref="buyer-detail({id:buyer.id})">{{buyer.id}}</a></td>
+                    <td>{{buyer.name}}</td>
+                    <td>{{buyer.address}}</td>
+                    <td>
+                        <a ui-sref="item-detail({id:buyer.buys.id})">{{buyer.buys.id}}</a>
+                    </td>
+                    <td>
+                        <span ng-repeat="transacts in buyer.transacts">
+                            <a class="form-control-static" ui-sref="seller-detail({id: transacts.id})">{{transacts.id}}</a>{{$last ? '' : ', '}}
+                        </span>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="buyer-detail({id:buyer.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="buyer.edit({id:buyer.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="buyer.delete({id:buyer.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

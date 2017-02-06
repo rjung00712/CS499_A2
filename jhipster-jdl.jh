@@ -1,0 +1,29 @@
+entity Buyer {
+	id Integer,
+    name String,
+    address String
+}
+
+entity Seller {
+	id Integer,
+    name String,
+    account Integer
+}
+
+entity Item {
+	id Integer,
+    description String,
+    price Float
+}
+
+relationship ManyToMany {
+	Seller { sells } to Item
+}
+
+relationship ManyToMany {
+	Buyer { transacts } to Seller
+}
+
+relationship OneToOne {
+	Buyer { buys } to Item
+}

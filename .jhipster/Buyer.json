@@ -1,0 +1,36 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "buys",
+            "otherEntityName": "item",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "buyer"
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityRelationshipName": "",
+            "relationshipName": "transacts",
+            "otherEntityName": "seller",
+            "otherEntityField": "id",
+            "ownerSide": true
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "address",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20170205073034",
+    "entityTableName": "buyer",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no"
+}

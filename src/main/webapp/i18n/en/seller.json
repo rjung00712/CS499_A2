@@ -1,0 +1,24 @@
+{
+    "myappApp": {
+        "seller" : {
+            "home": {
+                "title": "Sellers",
+                "createLabel": "Create a new Seller",
+                "createOrEditLabel": "Create or edit a Seller",
+                "search": "Search for Seller"
+            },
+            "created": "A new Seller is created with identifier {{ param }}",
+            "updated": "A Seller is updated with identifier {{ param }}",
+            "deleted": "A Seller is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Seller {{ id }}?"
+            },
+            "detail": {
+                "title": "Seller"
+            },
+            "name": "Name",
+            "account": "Account",
+            "sells": "Sells"
+        }
+    }
+}

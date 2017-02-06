@@ -1,0 +1,27 @@
+
+<div>
+    <h2><span data-translate="myappApp.item.detail.title">Item</span> {{vm.item.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="myappApp.item.description">Description</span></dt>
+        <dd>
+            <span>{{vm.item.description}}</span>
+        </dd>
+        <dt><span data-translate="myappApp.item.price">Price</span></dt>
+        <dd>
+            <span>{{vm.item.price}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="item-detail.edit({id:vm.item.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

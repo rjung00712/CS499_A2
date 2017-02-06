@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity Buyer.
+    -->
+    <changeSet id="20170205073034-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="buys_id"
+                                 baseTableName="buyer"
+                                 constraintName="fk_buyer_buys_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="item"/>
+
+        <addForeignKeyConstraint baseColumnNames="buyers_id"
+                                 baseTableName="buyer_transacts"
+                                 constraintName="fk_buyer_transacts_buyers_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="buyer"/>
+        <addForeignKeyConstraint baseColumnNames="transacts_id"
+                                 baseTableName="buyer_transacts"
+                                 constraintName="fk_buyer_transacts_transacts_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="seller"/>
+        
+    </changeSet>
+</databaseChangeLog>
